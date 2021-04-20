@@ -1,0 +1,37 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1618902055777' stop='1618902061046'>
+    <name>Alert test</name>
+    <title>Alert test</title>
+    <test-cases>
+        <test-case start='1618902055777' status='broken' stop='1618902061044'>
+            <name>Open first</name>
+            <title>Open first</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-89.0.4389.128'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='7dc09011-b36c-4189-9ae0-62523e4673f1-attachment.png' type='image/png' size='32611'/>
+            </attachments>
+            <failure>
+                <message>this.resultText.getText is not a function</message>
+                <stack-trace>TypeError: this.resultText.getText is not a function
+                    at Element.waitUntil.timeout (D:\dev\projects\polygon\test\pageobjects\alert.page.js:26:30)
+                    at Timer._tick (D:\dev\projects\polygon\node_modules\webdriverio\build\utils\Timer.js:76:29)
+                    at Timer._start (D:\dev\projects\polygon\node_modules\webdriverio\build\utils\Timer.js:45:18)
+                    at new Timer (D:\dev\projects\polygon\node_modules\webdriverio\build\utils\Timer.js:38:14)
+                    at Element.waitUntil (D:\dev\projects\polygon\node_modules\webdriverio\build\commands\browser\waitUntil.js:62:17)
+                    at Element.wrapCommandFn (D:\dev\projects\polygon\node_modules\@wdio\utils\build\shim.js:78:38)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                    at async Element.elementErrorHandlerCallbackFn (D:\dev\projects\polygon\node_modules\webdriverio\build\middlewares.js:23:32)
+                    at async Element.wrapCommandFn (D:\dev\projects\polygon\node_modules\@wdio\utils\build\shim.js:78:29)
+                    at async AlertPage.openAlert (D:\dev\projects\polygon\test\pageobjects\alert.page.js:25:5)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

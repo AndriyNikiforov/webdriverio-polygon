@@ -1,0 +1,31 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1618901125668' stop='1618901132743'>
+    <name>Alert test</name>
+    <title>Alert test</title>
+    <test-cases>
+        <test-case start='1618901125668' status='broken' stop='1618901132742'>
+            <name>Open first</name>
+            <title>Open first</title>
+            <labels>
+                <label name='language' value='javascript'/>
+                <label name='framework' value='wdio'/>
+                <label name='thread' value='0-0'/>
+            </labels>
+            <parameters>
+                <parameter kind='argument' name='browser' value='Chrome-89.0.4389.128'/>
+            </parameters>
+            <steps/>
+            <attachments>
+                <attachment title='Screenshot' source='ec3ee8d1-0cfa-4640-b7d4-1900d6981f35-attachment.png' type='image/png' size='32611'/>
+            </attachments>
+            <failure>
+                <message>Not found the message</message>
+                <stack-trace>Error: Not found the message
+                    at Context.&lt;anonymous> (D:\dev\projects\polygon\test\specs\alert.e2e.js:13:13)
+                    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+                    at async Context.executeAsync (D:\dev\projects\polygon\node_modules\@wdio\utils\build\shim.js:136:16)
+                    at async Context.testFrameworkFnWrapper (D:\dev\projects\polygon\node_modules\@wdio\utils\build\test-framework\testFnWrapper.js:52:18)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
