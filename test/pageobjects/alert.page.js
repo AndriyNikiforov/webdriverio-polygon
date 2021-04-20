@@ -40,7 +40,7 @@ class AlertPage extends Page {
       timeout: 5000,
     });
     await (await this.buttonConfirm).click();
-    await browser.acceptAlert();
+    browser.acceptAlert();
 
     browser.waitUntil(() => {
       const text = $('#result').getText();
@@ -56,7 +56,7 @@ class AlertPage extends Page {
       timeout: 5000,
     });
     await (await this.buttonPrompt).click();
-    await browser.sendAlertText('dev/null');
+    browser.sendAlertText('dev/null');
     browser.acceptAlert();
 
     browser.waitUntil(() => {

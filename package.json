@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "wdio run wdio.conf.js"
   },
   "keywords": [],
   "author": "",
@@ -22,5 +22,8 @@
     "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-wdio": "^7.4.2",
     "wdio-chromedriver-service": "^7.0.0"
+  },
+  "dependencies": {
+    "@wdio/cli": "^7.5.0"
   }
 }
