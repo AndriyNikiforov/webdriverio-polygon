@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 const AlertPage = require('../pageobjects/alert.page');
 
 describe('Alert test', () => {
