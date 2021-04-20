@@ -1,16 +1,17 @@
+/* eslint-disable class-methods-use-this */
 const Page = require('./page');
 
 class LoginPage extends Page {
   get inputUsername() {
-    return $('#username')
+    return $('#username');
   }
 
   get inputPassword() {
-    return $('#password')
+    return $('#password');
   }
 
   get btnSubmit() {
-    return $('button[type="submit"]')
+    return $('button[type="submit"]');
   }
 
   async login(username, password) {

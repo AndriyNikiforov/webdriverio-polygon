@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 const Page = require('./page');
 
 class AlertPage extends Page {
@@ -18,18 +19,19 @@ class AlertPage extends Page {
   }
 
   async openAlert() {
+    await super.screenshot('first');
     await (await this.buttonAlert).waitForDisplayed({
-      timeout: 5000
+      timeout: 5000,
     });
     await (await this.buttonAlert).click();
-    await browser.acceptAlert();
+    browser.acceptAlert();
 
     browser.waitUntil(() => {
       const text = $('#result').getText();
       return text === 'You successfully clicked an alert';
     }, {
       timeout: 5000,
-      timeoutMsg: 'Not found the message'
+      timeoutMsg: 'Not found the message',
     });
   }
 
@@ -45,7 +47,7 @@ class AlertPage extends Page {
       return text === 'You clicked: Ok';
     }, {
       timeout: 5000,
-      timeoutMsg: 'Not found the message'
+      timeoutMsg: 'Not found the message',
     });
   }
 
@@ -55,14 +57,14 @@ class AlertPage extends Page {
     });
     await (await this.buttonPrompt).click();
     await browser.sendAlertText('dev/null');
-    await browser.acceptAlert();
+    browser.acceptAlert();
 
     browser.waitUntil(() => {
       const text = $('#result').getText();
       return text === 'You entered: dev/null';
     }, {
       timeout: 5000,
-      timeoutMsg: 'Not found the message'
+      timeoutMsg: 'Not found the message',
     });
   }
 
