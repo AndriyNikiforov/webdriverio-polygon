@@ -23,6 +23,7 @@ class AlertPage extends Page {
     await (await this.buttonAlert).waitForDisplayed({
       timeout: 5000,
     });
+
     await (await this.buttonAlert).click();
     browser.acceptAlert();
 
